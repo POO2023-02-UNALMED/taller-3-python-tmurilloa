@@ -25,10 +25,10 @@ class Control:
             self.tv.volumen -= 1
     
     def setCanal(self,canal):
-       if self.estado and (1 <= canal <= 120 ):
+       if self.tv.estado and (1 <= canal <= 120 ):
            self.tv.canal = canal
     def setVolumen(self,volumen):
-       if self.estado and (0 <= volumen <= 7 ):
+       if self.tv.estado and (0 <= volumen <= 7 ):
            self.tv.volumen = volumen
 
     def setTv(self,tv):
