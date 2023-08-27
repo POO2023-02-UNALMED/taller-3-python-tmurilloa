@@ -7,9 +7,9 @@ class Control:
         self.tv.setControl(self)
     
     def turnOn(self):
-        self.tv._estado(True)
+        self.tv.turnOn()
     def turnOff(self):
-        self.tv.estado(False)
+        self.tv.turnOff()
 
     def canalUp(self):
         if self.tv.estado and (self.tv.canal < 120 ):
@@ -25,10 +25,10 @@ class Control:
             self.tv.volumen -= 1
     
     def setCanal(self,canal):
-       if self.tv.estado and (1 <= canal <= 120 ):
+       if self.tv.getEstado() and (1 <= canal <= 120 ):
            self.tv.canal = canal
     def setVolumen(self,volumen):
-       if self.tv.estado and (0 <= volumen <= 7 ):
+       if self.tv.getEstado() and (0 <= volumen <= 7 ):
            self.tv.volumen = volumen
 
     def setTv(self,tv):
